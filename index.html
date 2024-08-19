@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./img/logo.1.png" alt="">
+                </a>
+            </div>
+            <div class="nav_but">
+                <a href="index.html">HOME</a>
+                <a href="photo.html">PHOT0</a>
+                <a href="">ABOUT</a>
+                <a href="">HELP</a>
+            </div>
+            <div>
+                <button type="button" class="login-btn" onclick="location.href='login.html'">LOGIN</button>
+            </div>
+        </div>
+        <section class="header">
+            <div class="title">
+                <h1>PHOTO LIFE</h1>
+                <p>당신의 사진을 공유해 보세요!</p>
+                <button type="button" onclick="location.href='photo.html'">share yout life</button>
+            </div>
+        </section>
+        <section class="intro">
+            <div class="card">
+                <i class="fab fa-css3-alt"></i>
+                <img src="./img/intro1.png" class ="intro" alt="">
+                <h1>PHOTO</h1>
+                <p>Check out the great camera photos left by various people! Then you can be the star of that great photo.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud-download-alt"></i>
+                <img src="./img/intro2.png" class ="intro"alt="">
+                <h1>SAVE</h1>
+                <p>Save your high-definition, high-quality images online without worrying about storage capacity!</p>
+            </div>
+            <div class="card">
+                <i class="fab fa-evernote"></i>
+                <img src="./img/intro3.png" class ="intro"alt="">
+                <h1>SHARE</h1>
+                <p>Share photos and give feedback with your friends! Let's show off my great photos.</p>
+            </div>
+        </section>
+        <section class="service">
+            <div class="container">
+                <div class="img">
+                </div>
+                <div class="text">
+                    <h1>like a photographer</h1>
+                    <p>The etymology of photography is a combination of the Greek words light (phos) and drawing (graphos). It is understood as a chemical component that reacts to light and a chemical principle that fixes an image, and can be said to be the final completed word. The etymology of the word ‘photo’ used in Korea is influenced by China and Japan. In China, it was called Nieyoung, meaning ‘to capture light.’ It was introduced to Japan, where it became a photo meaning ‘to capture the light as it is.’</p>
+                    <button>more...</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="left">
+                    <h1>PKW X PROJECT</h1>
+                    <p>kyungwon.park0407@gmail.com</p>
+                    <div class="sns">
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-github"></i>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="list">
+                        <h2>SPONSOR</h2>
+                        <ul>
+                            <li>CANNON</li>
+                            <li>SONNY</li>
+                            <li>NIKON</li>
+                            <li>PANASONIC</li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <h2>ABOUT</h2>
+                        <ul>
+                            <li>010-0000-0000</li>
+                            <li>SEOULTECH 232</li>
+                            <li>11111</li>
+                            <li>NOTHING</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copy_right">
+                <p>2024-08-19</p>
+            </div>
+        </footer>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const cards = document.querySelectorAll(".card");
+
+                function handleScroll() {
+                    cards.forEach(card => {
+                        const cardPosition = card.getBoundingClientRect().top;
+                        const screenPosition = window.innerHeight / 1.2;
+
+                        if (cardPosition < screenPosition) {
+                            card.classList.add("visible");
+                        }
+                    });
+                }
+
+                window.addEventListener("scroll", handleScroll);
+                handleScroll(); // 페이지 로드 시에도 한 번 실행
+            });
+        </script>
+    </body>
+</html>

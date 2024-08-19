@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet"  href="login.css">
+    <link rel="stylesheet"  href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./img/logo.1.png" alt="">
+            </a>
+        </div>
+        <div class="nav_but">
+            <a href="index.html">HOME</a>
+            <a href="photo.html">PHOT0</a>
+            <a href="">ABOUT</a>
+            <a href="">HELP</a>
+        </div>
+        <div>
+            <button type="button" class="login-btn" onclick="location.href='login.html'">LOGIN</button>
+        </div>
+    </div>
+    <article>
+        <div class = "login_wrapper">
+            <div class="login_logo" onclick="location.href='index.html'">ruby</div>
+            <form class="login_form">
+                <input id="LOGIN_ID" class = "login_text" type="text" name="id" placeholder="전화번호, 사용자 이름 또는 이메일">
+                <input  id="LOGIN_PW" class = "login_text" type="password" name="id" placeholder="비밀번호">
+                <button id="LOGIN_BTN" class = "login_btn" type="button" disabled>로그인</button>
+            </form>
+            <a class = "login_bottom" href="" >비밀번호를 잊으셨나요?</a>
+        </div>
+    </article>
+    <script src="app.js" defer=""></script>
+</body>
+</html>

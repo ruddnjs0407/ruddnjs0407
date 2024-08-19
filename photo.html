@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="photo.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="index.html"><img src="./img/logo.1.png" alt="Logo"></a>
+        </div>
+        <div class="nav_but">
+            <a href="index.html">HOME</a>
+            <a href="photo.html">PHOTO</a>
+            <a href="">ABOUT</a>
+            <a href="">HELP</a>
+        </div>
+        <div>
+            <button type="button" class="login-btn" onclick="location.href='login.html'">LOGIN</button>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by title...">
+        <button id="searchBtn">SEARCH</button>
+        <button class="add-btn" id="addPhotoBtn">ADD</button>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery" id="photoGallery">
+            <div class="grid-item" data-index="0">
+                <img src="./img/photo.1.jpg" alt="Photo 1">
+                <div class="grid-item-title">Photo 1</div>
+            </div>
+            <div class="grid-item" data-index="1">
+                <img src="./img/photo.2.jpg" alt="Photo 2">
+                <div class="grid-item-title">Photo 2</div>
+            </div>
+            <div class="grid-item" data-index="2">
+                <img src="./img/photo.3.jpg" alt="Photo 3">
+                <div class="grid-item-title">Photo 3</div>
+            </div>
+            <div class="grid-item" data-index="3">
+                <img src="./img/photo.4.jpg" alt="Photo 4">
+                <div class="grid-item-title">Photo 4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="close-btn" id="closeLightboxBtn">&times;</button>
+            <button class="nav-btn prev-btn" id="prevBtn">&#9664;</button>
+            <div id="lightboxImages"></div>
+            <button class="nav-btn next-btn" id="nextBtn">&#9654;</button>
+            <div class="content">
+                <p id="lightboxTitle"></p>
+                <p id="lightboxDescription"></p>
+            </div>
+            <button class="like-btn" id="likeBtn">♡ Like</button>
+            <div class="comment-section">
+                <input type="text" placeholder="Add a comment..." id="commentInput">
+                <button id="addCommentBtn">Add Comment</button>
+                <div class="comment-list" id="commentList"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="addPhotoLightbox">
+        <div class="lightbox-content">
+            <h2>Add a New Photo</h2>
+            <input type="file" id="photoInput" accept="image/*" multiple><br>
+            <input type="text" id="photoTitle" placeholder="Title"><br>
+            <textarea id="photoDescription" placeholder="Description"></textarea>
+            <button class="add-btn" id="savePhotoBtn">Save Photo</button>
+            <button class="close-btn" id="closeAddPhotoLightboxBtn">Cancel</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="left">
+                <h1>PKW X PROJECT</h1>
+                <p>kyungwon.park0407@gmail.com</p>
+                <div class="sns">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-github"></i>
+                </div>
+            </div>
+            <div class="right">
+                <div class="list">
+                    <h2>SPONSOR</h2>
+                    <ul>
+                        <li>CANNON</li>
+                        <li>SONNY</li>
+                        <li>NIKON</li>
+                        <li>PANASONIC</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h2>ABOUT</h2>
+                    <ul>
+                        <li>010-0000-0000</li>
+                        <li>SEOULTECH 232</li>
+                        <li>11111</li>
+                        <li>NOTHING</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copy_right">
+            <p>2024-08-19</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="photo.js"></script>
+</body>
+</html>
